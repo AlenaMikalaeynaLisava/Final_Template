@@ -4,8 +4,7 @@
 @import "../style_components/triangles";
 @import "../style_components/mixin";
 html{
-    /*font-size: calc(5px + 0.4vw);*/
-    font-size: calc(4.25px + 0.4vw);
+    font-size: calc(5px + 0.4vw);
     font-family: $font-stack;
 }
 
@@ -86,12 +85,44 @@ header{
         width: 6.2%;
         font-size: 3rem;
         text-decoration: none;
+        width: 6%;
+    }
+    @media screen and (max-width:1279px){
+        .a_w{
+            width: 9%;
+        }
+    }
+    @media screen and (max-width:414px){
+        .a_w{
+            width: 13.33%;
+        }
+    }
+    .div1{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 15%;
+    }
+    @media screen and (max-width:1279px){
+        .div1{
+            width: 22.5%;
+        }
+    }
+    @media screen and (max-width:414px){
+        .div1{
+            width: 33.3%;
+        }
     }
     .header__image_first{
-        width: 5%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 36%;
+        height: 100%;
+        border-left: 0.1em $box-shadow-color solid;
     }
     .dotted_ellips{
-        width: 3.3em;
+        width: 60%;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -107,32 +138,61 @@ header{
         background-color: $white-background-color;
         border-radius: 10px;
     }
-    .element{
+    /*element{
         display: flex;
         justify-content: center;
         align-items: center;
         border-left: 0.1em $box-shadow-color solid;
-        }
+        background-color: blue;
+        }*/
     .folder{
-        padding: 3.8em 3.4em;
+        width: 32%;
+        padding: 3.4em 3.3em;
         background: url(../image/header/folder.png) no-repeat center center;
+        border-left: 0.1em $box-shadow-color solid;
     }
     .mixing-console{  
-        padding: 3.8em 3.4em;
+        width: 32%;
+        padding: 3.4em 3.3em;
         background: url(../image/header/mixing-console.png) no-repeat center center;
+        border-left: 0.1em $box-shadow-color solid;
     }
-    .upload{   
-        padding: 3.8em 3.4em;
+    .div2{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 15%;
+    }
+    @media screen and (max-width:1279px){
+        .div2{
+            margin-top: 0.5rem;
+            width: 22.5%;
+        }
+    }
+    @media screen and (max-width:414px){
+        .div2{
+            margin-top: 0.5rem;
+            width: 33.3%;
+        }
+    }
+    .upload{
+        width: 33.3%;
+        padding: 3.4em 3.2em;
         background: url(../image/header/upload.png) no-repeat center center;
+        border-left: 0.1em $box-shadow-color solid;
     }
     .envelope{
-        padding: 3.8em 3.4em;
+        width: 33.3%;
+        padding: 3.4em 3.2em;
         background: url(../image/header/envelope.png) no-repeat center center;
+        border-left: 0.1em $box-shadow-color solid;
     }
     .globe{
-        padding: 3.8em 3.4em;
-        background: url(../image/header/globe.png) no-repeat center center;
         position: relative;
+        width: 33.3%;
+        padding: 3.4em 3.3em;
+        background: url(../image/header/globe.png) no-repeat center center;
+        border-left: 0.1em $box-shadow-color solid;
     }
     .globe::after{
         position: absolute;
@@ -146,22 +206,54 @@ header{
     }
     .lady_head{
         display: flex;
-        width: 13%;
+        width: 16%;
     }
-    .lady_head img{
-        width: 100%;
+    @media screen and (max-width:1279px){
+        .lady_head{
+            margin-top: 0.5rem;
+            width: 24%;
+        }
     }
-    .three-dots{
-        width: 3.5%;
-        padding: 3.8em 2em;
-        background: url(../image/header/three-dots.png) no-repeat center center;
+    @media screen and (max-width:414px){
+        .lady_head{
+            margin-top: 0.5rem;
+            width: 35.5%;
+        }
+    }
+   .TreeDots{
+    width: 3%;
+    padding: 3.4em 2em;
+    background: url(../image/header/three-dots.png) no-repeat center center;
+   }
+   @media screen and (max-width:1279px){
+    .TreeDots{
+        margin-top: 0.5rem;
+        width: 4.5%;
+    }
+    }
+    @media screen and (max-width:414px){
+        .TreeDots{
+            margin-top: 0.5rem;
+            width: 6.66%;
+        }
     }
     .input_wrap{
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 51%;
+        width: 45%;
         border-left: 0.1em $box-shadow-color solid;
+    }
+    @media screen and (max-width:1279px){
+        .input_wrap{
+            width: 68.5%;
+        }
+    }
+    @media screen and (max-width:414px){
+        .input_wrap{
+            margin-top: 0.5rem;
+            width: 100%;
+        }
     }
     input{
         background-color: $light-background-color;
@@ -172,11 +264,11 @@ header{
         @include gradient_red;
     }
 }
-@media screen and (min-width:1281px){
+/*@media screen and (min-width:1281px){
     .input_wrap{
         width: 60%;
-    }
-}
+    }*
+}*/
 .header__input{
     display: flex;
     justify-content: space-between;
@@ -196,6 +288,14 @@ header .header__input_img{
     justify-content: center;
     padding: 0 0.76em 0 1.38em;
     margin-right: 2em;
+} 
+@media screen and (max-width:1919px)and (min-width:1279px){
+   header{
+       height: 8vh;
+   }
+   .lady_head img{
+    height: 8vh;
+    }
 }
 @media(max-width:1279px), screen and (orientation:portrait){
     header{
@@ -240,7 +340,7 @@ main{
     flex-direction: column;
     justify-content: space-between;;
     align-items: center;
-    width: 6.2%;
+    width: 6%;
     background: linear-gradient(to top, $rose-color, $orange-color);
     padding-bottom: 3em;
     a{
@@ -273,7 +373,7 @@ nav{
 /*Main content=================================================================================
 ===============================================================================================*/
 .main-content{
-    width: calc(100% - 6.2%);
+    width: calc(100% - 6%);
 }
 @media screen and (max-width:768px){
     .main-content{
@@ -288,17 +388,26 @@ nav{
     align-items: center;
     padding: 1.8em 0;
 }
-.numbers__element{
-    display: flex;
-    flex-direction: column;
-}
 .numbers__element p{
     margin-top: 0.2em;
     margin-bottom: 0.2em;
     font-family: $font-stack;
-    font-size: 2rem;
+    font-size: 1.8rem;
     font-weight: 600;
     @include gradient_red;
+}
+@media screen and (max-width:1919px)and (min-width:1279px){
+    .numbers{
+        padding: 1.3em 0;
+        height: 8vh;
+    }
+    .numbers__element p{
+        font-size: 1.5rem;
+    }
+}
+.numbers__element{
+    display: flex;
+    flex-direction: column;
 }
 .ten{
     font-family: $font-stack;
@@ -337,10 +446,10 @@ nav{
 /*Sub-main=====================================================================================
 ===============================================================================================*/
 .sub-main{
-    display: flex;
-    padding: 1.5rem 0 1.5rem 1.5rem;
+    display: flex; 
     background-color: $milk-background-color;
 }
+
 @media(max-width:1279px), screen and (orientation:portrait){
     .sub-main{
         display: flex;
@@ -349,8 +458,14 @@ nav{
 }
 .sub-main-center{
      /*padding: 0.8rem 0.8rem 0 0.8rem;*/
-    padding-right: 1.5rem;;
+     //padding: 1.5rem 1.5rem 1.5rem 1.5rem;
+     padding: 1.5rem;
     background-color: $milk-background-color; 
+}
+@media screen and (max-width:1919px)and (min-width:1279px){
+    .sub-main-center{
+        padding: 1.1rem;
+    }
 }
 @media(max-width:1279px), screen and (orientation:portrait){
     .sub-main-center{
@@ -364,6 +479,7 @@ nav{
     display: flex;
     justify-content: space-between;
 }
+
 @media(max-width:1279px), screen and (orientation:portrait){
     .sub-sub-main-center{
         display: flex;
@@ -384,18 +500,21 @@ nav{
     justify-content: space-between;
     align-items: center;
     width: 70.25%;
-    padding: 2rem 3rem;
+    padding: 1.5rem 3rem;
     background-color: $white-background-color;
 }
 .graph__head{
     display: flex;
     justify-content: space-between;
     width: 100%;
+    h4{
+        color: $user-name-font-color;
+    }
 }
 .graph_button{
     padding: 0.58em 1.33em;
     font-family: $font-stack;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     font-weight: 600;
     color: $gray-font-color;
     background-color: $white-background-color;
@@ -409,6 +528,14 @@ nav{
 .graph_picture img{
     /*width: 90%;*/
     height: 16em;
+}
+@media screen and (max-width:1919px)and (min-width:1279px){
+    .graph{
+        padding: 1rem 3rem;
+    }
+    .graph_picture img{
+        height: 15em;
+    }
 }
 @media screen and (max-width:767px){
     .graph{
@@ -430,6 +557,9 @@ nav{
         font-weight: 600;
         color: $gray-font-color;
     }
+    h4{
+        color: $user-name-font-color;
+    }
 }
 @media screen and (max-width:767px){
     .round_diagram{
@@ -443,6 +573,11 @@ nav{
     justify-content: space-between;
     padding: 1.5rem 0 0 0 ;
 }
+@media screen and (max-width:1919px)and (min-width:1279px){
+    .sub-sub-main-center-bottumn{
+        padding: 1.1rem 0 0 0;
+    }
+}
 @media screen and(max-width:1000px){
     .sub-sub-main-center-bottumn{
         display: flex;
@@ -455,8 +590,12 @@ nav{
 ===============================================================================================*/
 .Customers-Feed{
     width: 42.5%;
-    padding: 3rem;
+    padding: 1.5rem;
     background-color: $white-background-color;
+    h4{
+        margin-bottom: 2em;
+        color: $user-name-font-color;
+    }
 }
 @media screen and (max-width:1000px){
     .Customers-Feed{
@@ -469,7 +608,6 @@ nav{
 .Customers-Feed-content{
     display: flex;
     justify-content: space-between;
-    padding-top: 2rem;
 }
 .lady{
     margin-bottom: 1rem;
@@ -520,7 +658,14 @@ nav{
     margin-bottom:1em;
 }
 
-
+@media screen and (max-width:1919px)and (min-width:1279px){
+    .Customers-Feed{
+        padding: 1rem;
+        h4{
+            margin-bottom: 1.5em;
+        }
+    }
+}
 /*Set-of-three==============================================================================
 ===============================================================================================*/
 .set-of-three{
@@ -535,16 +680,18 @@ nav{
     }
 }
 .list{
-    padding: 1.5em;
+    padding: 1.5em 1.5rem 1.5rem 3rem;
     font-family: $font-stack;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     font-weight: 400;
+    color: $user-name-font-color;
     background-color: $white-background-color;
     h4{
         margin-bottom: 1.5em;
         color: $user-name-font-color;
     }
 }
+
 li{
     display: flex;
     justify-content: space-between;
@@ -561,6 +708,14 @@ li{
     }
     div img{ 
      margin-right: 1em;
+    }
+}
+@media screen and (max-width:1919px)and (min-width:1279px){
+    .list{
+        padding: 1em 1.5rem 1.6rem 3rem;
+    }
+    li{
+        padding: 0.75em;
     }
 }
 li::before{
@@ -587,10 +742,15 @@ li:first-child::before{
     justify-content: space-between;
     margin-top: 1.5rem;
     
-    h2{
+    h4{
         margin-top: 1rem;
         text-align: center;
         color: $user-name-font-color;
+    }
+}
+@media screen and (max-width:1919px)and (min-width:1279px){
+    .Progress-Shipments{
+        margin-top: 1rem;
     }
 }
 .Progress{
@@ -634,6 +794,23 @@ li:first-child::before{
 .Shipments__togather{
     display: flex;
     justify-content: space-between;
+}
+@media screen and (max-width:1919px)and (min-width:1279px){
+    .Progress{
+        padding: 1rem 1rem 1.5rem 1rem;
+    }
+    .Shipments{
+        padding: 1rem 1rem 1.5rem 2rem;
+    }
+    .Shipments_many{
+        font-size: 1.4rem;
+        padding-bottom: 0.5em;
+        margin-right: 6em;
+    }
+    .Progress_many{
+        padding-bottom: 0.5em;
+        font-size: 1.4rem;
+    }
 }
 @media screen and (max-width:567px){
     .Progress-Shipments{
@@ -683,6 +860,12 @@ li:first-child::before{
     padding-bottom: 1em;
     margin: 0em 1.5em;
     border-bottom: 1px solid $box-shadow-color;
+}
+@media screen and (max-width:1919px)and (min-width:1279px){
+    .users{
+        padding-top: 0.8em;
+        padding-bottom: 0.8em;
+    }
 }
 .avatar{
     height: 4em;
@@ -752,10 +935,10 @@ li:first-child::before{
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 0.5rem 1.2rem;
-    margin-bottom: 0.5rem;
+    padding: 1rem 1.2rem;
+    margin-bottom: 1rem;
     width: 5.5rem;
-    height: 5rem;
+    height: 5.5rem;
     border-radius: 10px;
 }
 .featured-company-1{
@@ -776,96 +959,8 @@ li:first-child::before{
 .featured-company-6{
     background-image: linear-gradient(45deg, #fce1a0, #f48f83);
 }
-
-@media screen and (max-width:1919px)and (min-width:1279px){
-    html{
-        font-size: calc(3.5px + 0.4vw);
-    }
-    .numbers{
-        padding: 1em 0;
-    }
-    .numbers__element p{
-        font-size: 1rem;
-    }
-    h2{
-        font-size: 1.2rem;
-    }
-    h3{
-        font-size: 1.1rem;
-    }
-    h4{
-        font-size: 1rem;
-    }
-    .sub-main{
-        padding: 1rem 0 1rem 1rem;
-    }
-    .Progress-Shipments{
-        margin-top: 1rem;
-        h2{
-            margin-top: 0.5rem;
-        }
-    }
-    .Progress_many, .Shipments_many{
-        font-size: 1.3rem;
-        padding-bottom: 0.5em;
-    }
-    .Shipments, .Progress{
-        padding: 1.5rem 1rem 1.3rem 2rem;
-    }
-    .featured-company{
-        padding: 1rem 1.2rem;
-        margin-bottom: 0.5rem;
-    }
-    .sub-main-aside h4{
-        margin: 1.4em 5em;
-    }
-    .featured-companys{
-        padding: 0 2rem 1.5rem 1rem;
-    }
-    .ten{
-        font-size: 1rem;
-    }
-    .graph{
-        padding: 1rem 3rem;
-    }
-    .round_diagram{
-        padding: 1rem 7rem;
-        p{
-            font-size: 1.1rem;
-        }
-    }
-    .list{
-        padding: 1em 2em;
-        font-size: 1.1rem;
-    }
-    .users{
-        padding-top: 1em;
-        padding-bottom: 1em;
-        margin: 0em 1.5em;
-    }
-    .graph_button{
-        padding: 0.5em 1.33em;
-        font-size: 1rem;
-    }
-    .lady_head img{
-        height: 100%;
-    }
-    .folder, .mixing-console, .upload, .envelope, .globe{
-        padding: 1em 3.4em;
-    }
-    .three-dots{
-        padding: 1em 2em;
-    }
-    .header__input{
-        padding: 0.5em 1.08em 0.5em;
-        font-size: 1rem;
-    }
-    .element_w{
-        padding:0 0.3em;
-        font-size: 2rem;
-    }
-    .a_w{
-        font-size: 2rem;
-    }
+.sub-main-aside h4{
+    text-align: center;
+    margin: 1em auto;
 }
 
